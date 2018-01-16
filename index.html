@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>One</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app">
+    <div class="container">
+        <div class="header">
+            <h1>SPA Web App Challenge 2</h1>
+            <p>
+                <strong>
+                    Send an email now!
+                </strong>
+            </p>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form v-on:submit.prevent="onSubmit">
+                    <div class="form-group">
+                        <label>To</label>
+                        <input v-model="to" class="form-control" type="email" placeholder="recipient@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label>CC</label>
+                        <input v-model="cc" class="form-control" type="email" placeholder="recipient@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label>BCC</label>
+                        <input v-model="bcc" class="form-control" type="email" placeholder="recipient@domain.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input v-model="subject" class="form-control" type="text" placeholder="Type your subject...">
+                    </div>
+                    <div class="form-group">
+                        <textarea v-model="message" class="form-control" cols="40" rows="10" placeholder="Type your message..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send" class="btn btn-primary">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="reload/reload.js"></script>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="node_modules/axios/dist/axios.js"></script>
+<script src="node_modules/vue-axios/dist/vue-axios.es5.js"></script>
+<script type="text/javascript" src="public/script.js"></script>
+
+</body>
+</html>
